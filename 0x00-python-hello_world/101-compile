@@ -1,2 +1,7 @@
 #!/bin/bash
 python -m compileall $PYFILE
+export PYFILE=main.pyc
+mv __pycache__/*.pyc __pycache__/$PYFILE
+mv __pycache__/$PYFILE .
+export PYFILE=main.py
+rm -r __pycache__
