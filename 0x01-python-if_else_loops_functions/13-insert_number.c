@@ -18,7 +18,7 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *new_node, *prev, *temp = *head;
 
 	if (head == NULL)
-		return (NULL);
+		return(create_new_list(head, number));
 	while (temp != NULL)
 	{
 		prev = temp;
@@ -55,4 +55,26 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 	}
 	return (new_node);
+}
+
+/**
+ * create_new_list - create a new linked list when a
+ *                   NULL head is passed to insert_number
+ *
+ * @head: head of linked list
+ * @number: number to be assigned to integer field of list
+ *
+ * Return: return address of head
+ */
+
+listint_t *create_new_list(listint_t **head, int number)
+{
+	listint_t *new_node = malloc(sizeof(listint_t));
+
+	new_node->n = number;
+	new_node->next = NULL;
+
+	*head = new_node;
+
+	return (*head);
 }
