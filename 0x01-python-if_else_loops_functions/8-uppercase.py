@@ -5,10 +5,6 @@ def uppercase(str):
     count = 0
     length = len(str)
 
-    if length == 0:
-        print(str)
-        return 0
-
     for i in str:
         ascii_val = ord(i)
 
@@ -21,3 +17,5 @@ def uppercase(str):
             print("{}".format(i))
 
         count += 1
+
+    return 0
