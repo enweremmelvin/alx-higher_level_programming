@@ -28,10 +28,21 @@ listint_t *insert_node(listint_t **head, int number)
 		prev = temp;
 		temp = temp->next;
 
+		if (number < prev->n)
+		{
+			new_node = malloc(sizeof(listint_t));
+			if (new_node == NULL)
+				return (NULL);
+
+			new_node->n = number;
+			new_node->next = prev;
+			*head = new_node;
+			break;
+		}
+
 		if ((number >= prev->n) && (number <= temp->n))
 		{
 			new_node = malloc(sizeof(listint_t));
-
 			if (new_node == NULL)
 				return (NULL);
 
