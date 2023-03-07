@@ -12,7 +12,6 @@ else:
 
 if last_digit > 5:
     message = "and is greater than 5"
-    pass
 elif last_digit == 0:
     message = "and is 0"
 elif last_digit < 6 and last_digit != 0:
