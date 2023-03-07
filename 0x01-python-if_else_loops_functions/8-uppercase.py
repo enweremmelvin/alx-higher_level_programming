@@ -5,6 +5,9 @@ def uppercase(str):
     count = 0
     length = len(str)
 
+    if length == 0:
+        return 1
+
     for i in str:
         ascii_val = ord(i)
 
