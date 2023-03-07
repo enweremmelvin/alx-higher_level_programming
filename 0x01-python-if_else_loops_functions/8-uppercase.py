@@ -10,6 +10,8 @@ def uppercase(str):
 
         if ascii_val >= 97 and ascii_val <= 122:
             i = chr(ascii_val - 32)
+        if length == 0:
+            i = ""
 
         if count < (length - 1):
             print("{}".format(i), end="")
