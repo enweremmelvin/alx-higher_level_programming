@@ -11,22 +11,20 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *temp;
-	listint_t *iter;
+	listint_t *temp, *iter, *prev;
 
 	if (list == NULL)
 		return (0);
 
-	temp = list;
-	iter = list;
+	temp = iter = list;
 
 	while (iter->next != NULL)
 	{
-		if (temp == iter->next)
-			return (1);
-
+		prev = iter;
 		iter = iter->next;
 
+		if ((prev == iter) || (prev == iter->next))
+			return (1);
 		if (iter == temp)
 			return (1);
 	}
