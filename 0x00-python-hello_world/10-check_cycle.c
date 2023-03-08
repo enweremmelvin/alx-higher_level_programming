@@ -22,6 +22,9 @@ int check_cycle(listint_t *list)
 
 	while (iter->next != NULL)
 	{
+		if (temp == iter->next)
+			return (1);
+
 		iter = iter->next;
 
 		if (iter == temp)
