@@ -11,20 +11,18 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *temp, *iter, *prev;
+	listint_t *temp, *iter;
 
 	if (list == NULL)
 		return (0);
 
-	temp = iter = list;
+	temp = list;
+	iter = list;
 
 	while (iter->next != NULL)
 	{
-		prev = iter;
 		iter = iter->next;
 
-		if ((prev == iter) || (prev == iter->next))
-			return (1);
 		if (iter == temp)
 			return (1);
 	}
