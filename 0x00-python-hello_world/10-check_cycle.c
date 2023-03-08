@@ -14,6 +14,9 @@ int check_cycle(listint_t *list)
 	listint_t *temp;
 	listint_t *iter;
 
+	if (list == NULL)
+		return (0);
+
 	temp = list;
 	iter = list;
 
