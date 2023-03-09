@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-__import__('hidden_4')
+import hidden_4
 
-names = dir()
+names = dir(hidden_4)
 
 for i in names:
-    print(i)
+    if i[0] != "_":
+        print(i)
