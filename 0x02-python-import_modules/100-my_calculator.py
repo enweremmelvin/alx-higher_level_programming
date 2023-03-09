@@ -16,7 +16,7 @@ if __name__ == "__main__":
             operator_check = True
             break
 
-    if operator_check == False:
+    if not operator_check:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
 
