@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
 def magic_calculation(a, b):
-    result = 98 + (b ** a)
+    num = 98
+    power_val = b ** a
+    result = num + power_val
     return result
