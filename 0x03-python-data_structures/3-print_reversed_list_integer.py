@@ -2,7 +2,7 @@
 
 def print_reversed_list_integer(my_list=[]):
 
-    if my_list == None or my_list == []:
+    if my_list is None or my_list == []:
         return
 
     list_len = (len(my_list) + 1) * -1
